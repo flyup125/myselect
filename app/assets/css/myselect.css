@@ -1,0 +1,40 @@
+.myselect .dropdown-menu {
+	overflow-y: auto;
+	max-height: 200px;
+	max-width: 300px;
+}
+
+.myselect span.selected-value {
+	display: inline-block;
+	padding: 0px 5px;
+	font-weight: normal;
+	line-height: 1.42857143;
+	color: #333;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.myselect li.myoption {
+	display: block;
+	padding: 3px 15px;
+	clear: both;
+	font-weight: normal;
+	line-height: 1.42857143;
+	color: #333;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.myselect li.myoption:hover,
+.myselect li.myoption:focus
+.myselect li.myoption.focus {
+	text-decoration: none;
+	color: #262626;
+	background-color: #f5f5f5;
+}
+
+.myselect li.myoption.active {
+	text-decoration: none;
+	color: #262626;
+	background-color: #efefef;
+}

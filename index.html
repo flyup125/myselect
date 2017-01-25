@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="myselect">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<base href="/">
+	<title>myselect</title>
+	<meta name="description" content="myselect" />
+	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=yes" />
+	<!-- injector:css -->
+	<link rel="stylesheet" href="/src/bower_components/bootstrap/dist/css/bootstrap.css">
+	<!-- endinjector -->
+	<link rel="stylesheet" href="/app/assets/css/myselect.css">
+</head>
+<body ng-controller="MySelectCtrl">
+<!--Beginning-->
+	<div class="container">
+		<div class="row">
+			<div class="form-group">
+				<label>options="option for option in myOptions"</label>
+				<div>{{test}}</div>
+				<myselect ng-model="test" options="option for option in myOptions">
+				</myselect>
+			</div>
+
+			<div class="form-group">
+				<label>
+					multiselect<br>
+					options="option as option for option in myOptions"
+				</label>
+				<div>{{test1 | json}}</div>
+				<myselect ng-model="test1" options="option as option for option in myOptions1" multiple>
+				</myselect>
+			</div>
+
+			<div class="form-group">
+				<label>options="option.value as option.label for option in myOptions"</label>
+				<div>{{test2}}</div>
+				<myselect ng-model="test2" options="month.value as month.title for month in monthes">
+				</myselect>
+			</div>
+
+			<div class="form-group">
+				<label>
+					multiselect<br>
+					options="value as title for (value, title) in myOptions"
+				</label>
+				<div>{{test3 | json}}</div>
+				<myselect ng-model="test3" options="month as title for (month, title) in monthes1" multiple>
+				</myselect>
+			</div>
+			<div class="form-group">
+				<label>
+					options="value as title for (value, title) in myOptions"<br>
+					manual additional option
+				</label>
+				<div>{{test4 | json}}</div>
+				<myselect ng-model="test4" options="month as title for (month, title) in monthes1">
+					<myoption value="'all'">All</myoption>
+				</myselect>
+			</div>
+		</div>
+	</div>
+<!--End-->
+
+<!-- injector:js -->
+<script src="/src/bower_components/jquery/dist/jquery.js"></script>
+<script src="/src/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="/src/bower_components/angular/angular.js"></script>
+<script src="/src/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="/app/app.js"></script>
+<!-- endinjector -->
+<script src="/app/directives/myselect/myselect.js"></script>
+
+</body>
+</html>

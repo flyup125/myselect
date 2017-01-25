@@ -1,0 +1,12 @@
+<div class="dropdown myselect">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+		<span class="selected-value">{{multiple ? ngModel.length + ' options selected' : ngModelLabel}}</span>
+		<span class="caret"></span>
+	</button>
+
+	<ul class="dropdown-menu">
+		<myoption ng-repeat="option in options" value="option.value">{{option.label}}</myoption>
+		<ng-transclude>
+		</ng-transclude>
+	</ul>
+</div>

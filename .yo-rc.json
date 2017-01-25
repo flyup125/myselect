@@ -1,0 +1,9 @@
+{
+  "generator-angm": {
+    "appName": "myselect",
+    "angularCookies": false,
+    "angularAnimate": false,
+    "angularSanitize": false,
+    "angularBootstrap": true
+  }
+}
