@@ -1,1 +1,1 @@
-# Ang-Generator
+# myselect - custom select directive based on bootstrap
