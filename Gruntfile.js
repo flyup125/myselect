@@ -172,4 +172,8 @@ module.exports = function (grunt) {
 	// Development task(s).
 	grunt.registerTask('dev', ['injector:dev', 'concurrent']);
 
+	grunt.registerTask("default", [
+		"dev"
+	]);
+
 };
